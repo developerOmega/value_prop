@@ -1,0 +1,28 @@
+<h1>Articulos</h1>
+
+<form action="/api/v1/belongings" method="POST" id="form_belonging">
+    <input type="text" name="name" placeholder="Nombre">
+    <input type="number" name="value" placeholder="Valor">
+    <input type="number" name="quantity" placeholder="Cantidad">
+    
+    <label for="active">Activo</label>
+    <input type="checkbox" name="active" id="active" >
+
+    <input type="number" name="value_active" placeholder="valor por mes">
+
+    <input type="submit" value="Guardar">
+
+</form>
+
+<table id="table_beloning">
+    <tr>
+        <th>Nombre</th>
+        <th>Valor</th>
+        <th>Cantidad</th>
+        <th>Activo</th>
+        <th>Valor por mes</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+    </tr>
+
+</table>

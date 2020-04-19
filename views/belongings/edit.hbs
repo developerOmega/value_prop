@@ -1,0 +1,16 @@
+<h1>Editar {{ belonging.name }}</h1>
+
+<form action="/api/v1/belongings/{{ belonging.id }}?_method=PUT" method="POST" id="edit_belonging">
+    <input type="hidden" name="id" value="{{ belonging.id }}" >
+    <input type="text" name="name" placeholder="Nombre" value="{{ belonging.name }}">
+    <input type="number" name="value" placeholder="Valor" value="{{ belonging.value }}">
+    <input type="number" name="quantity" placeholder="Cantidad" value="{{ belonging.quantity }}">
+    
+    <label for="active">Activo</label>
+    <input type="checkbox" name="active" id="active" {{ checked  belonging.active true}} >
+
+    <input type="number" name="value_active" placeholder="valor por mes" value="{{ belonging.value_active }}">
+
+    <input type="submit" value="Guardar">
+
+</form>

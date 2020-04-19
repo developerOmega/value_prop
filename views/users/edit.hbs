@@ -1,0 +1,17 @@
+<h1>Editar usuarios</h1>
+
+<form action="/users/{{ user.id }}?_method=PUT" method="POST">
+
+    <input type="text" name="first_name" value="{{ user.first_name }}" placeholder="Ingresa tu nombre">
+    <input type="text" name="last_name" value="{{ user.last_name }}" placeholder="Ingresa tus apellidos">
+    <input type="email" name="email" value="{{ user.email }}" placeholder="Ingresa tu email">
+    {{!-- <input type="password" name="password" placeholder="ingresa tu contrasenia"> --}}
+
+    <label for="type">Tipo de usuario</label>
+    <select name="type" id="type">
+        <option {{ selected user.type 'USER_TYPE' }}  value="USER_TYPE">USER_TYPE</option>
+        <option {{ selected user.type 'ADMIN_TYPE' }} value="ADMIN_TYPE">ADMIN_TYPE</option>
+    </select>
+
+    <input type="submit" value="Guardar">
+</form>
